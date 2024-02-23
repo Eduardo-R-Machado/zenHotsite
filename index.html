@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotsite Zensa</title>
+  </head>
+
+  <style>
+    @font-face {
+      font-family: "Gotham-bold";
+      src: url("/assets/fonts/gotham-bold.otf") format("opentype");
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Gotham-book";
+      src: url("/assets/fonts/gotham-book.otf") format("opentype");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    html {
+      width: 100vw;
+    }
+    * {
+      margin: 0;
+      font-family: "Gotham-bold", sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      overflow-x: hidden;
+    }
+
+    /* Main  */
+    main {
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* Header  */
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px;
+      max-height: 12rem;
+    }
+
+    header .logo {
+      width: 70px;
+      height: 70px;
+      margin-right: 30px;
+      object-fit: contain;
+    }
+
+    header .logo img {
+      width: 100%;
+      height: 100%;
+    }
+
+    header .menu-hamburguer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 35px;
+      height: 26px;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+    }
+
+    header .menu-hamburguer span {
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+    }
+
+    /* Banner  */
+    .banner {
+      background-image: url("assets/banner-hotsite.jpg");
+      width: 100%;
+      height: 600px;
+      background-size: cover;
+      background-position: center 52%;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: visible;
+    }
+
+    .banner img {
+      margin-bottom: -6rem;
+      position: absolute;
+    }
+
+    /* Section Orange  */
+    .section-orange {
+      background: radial-gradient(
+          circle at 60% 30%,
+          rgba(252, 159, 0, 1) 0%,
+          rgba(255, 100, 0, 0) 30%
+        ),
+        radial-gradient(
+          circle at 36% 70%,
+          rgba(252, 159, 0, 1) 0%,
+          rgba(255, 100, 0, 0) 20%
+        ),
+        #ff6400;
+      width: 100%;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+    }
+
+    .section-orange .infos {
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+
+    .section-orange .infos h3 {
+      font-weight: 700 !important;
+      font-size: 2rem;
+    }
+
+    .section-orange .infos h4 {
+      font-weight: 700 !important;
+      color: #fff;
+      font-size: 1.7rem;
+    }
+
+    .section-orange .wrap-btn {
+      width: 17rem;
+      margin-bottom: -17rem;
+      position: absolute;
+    }
+
+    .section-orange .wrap-btn img {
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      transition: 0.6s;
+    }
+
+    .section-orange .wrap-btn img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Section Reparadores  */
+    .section-reparadores {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      padding-bottom: 8rem;
+    }
+
+    .section-reparadores .infos {
+      text-align: center;
+      font-size: 1.3rem;
+      margin-top: 3rem;
+    }
+
+    .section-reparadores .infos h3 {
+      font-weight: 700 !important;
+      font-size: 1.6rem;
+      font-family: "Gotham-bold";
+      text-transform: uppercase;
+    }
+
+    .section-reparadores .infos h4 {
+      font-weight: 300 !important;
+      color: #000;
+      font-size: 1.3rem;
+      font-family: "Gotham-book";
+      max-width: 30rem;
+      margin-top: 1rem;
+    }
+
+    .section-reparadores .cards {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 3rem;
+    }
+
+    .section-reparadores .card {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: 0.6s;
+    }
+
+    .section-reparadores .card:hover {
+      transform: scale(1.1);
+    }
+
+    .section-reparadores .card .title-card {
+      font-weight: 700 !important;
+      font-size: 1.4rem;
+      font-family: "Gotham-bold";
+      margin-top: 1.8rem;
+    }
+
+    .section-reparadores .card .desc-card {
+      font-weight: 300 !important;
+      color: #000;
+      font-size: 1.1rem;
+      font-family: "Gotham-book";
+      max-width: 80%;
+      margin-top: 1rem;
+    }
+
+    .section-reparadores .btn-cadaster {
+      width: 17rem;
+      margin-bottom: -10rem;
+      position: relative;
+      height: 7rem;
+    }
+
+    .section-reparadores .btn-cadaster img {
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transition: 0.6s;
+    }
+
+    /* Section Grey  */
+    .section-grey {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #e1e1e1;
+      padding: 3rem 0;
+    }
+
+    .section-grey .info {
+      text-align: center;
+      font-size: 1.3rem;
+      margin-top: 3rem;
+      max-width: 32rem;
+    }
+
+    .section-grey .wrap-img {
+      max-width: 20rem;
+      position: relative;
+      bottom: 0;
+      margin-top: 5rem;
+      margin-bottom: -115px;
+    }
+
+    .section-grey .wrap-img img {
+      width: 100%;
+      transition: 0.6s;
+    }
+
+    /* Como Participar  */
+    .como-participar {
+      background: radial-gradient(
+          circle at 50% 0%,
+          rgba(252, 159, 0, 1) 0%,
+          rgba(255, 100, 0, 0) 80%
+        ),
+        radial-gradient(
+          circle at 50% 20%,
+          rgba(252, 159, 0, 1) 0%,
+          rgba(255, 100, 0, 0) 10%
+        ),
+        #ff6400;
+      width: 100%;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 6rem;
+    }
+
+    .como-participar h3 {
+      margin-top: 1.6rem;
+      font-weight: 700 !important;
+      font-size: 2.2rem;
+      color: #000;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .como-participar p {
+      font-weight: 300 !important;
+      color: #fff;
+      font-size: 1.5rem;
+      text-align: center;
+      max-width: 42rem;
+      margin-top: 1rem;
+      font-family: "Gotham-book";
+    }
+
+    /* Section Mockup  */
+
+    .section-mockup {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      height: 30rem;
+      align-items: center;
+      background-color: #e1e1e1;
+    }
+    .section-mockup img {
+      transition: 0.6s;
+      position: absolute;
+      width: auto;
+      height: 38rem;
+      margin-top: -11rem;
+      cursor: pointer;
+      transition: 0.6s;
+    }
+
+    .section-mockup img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Accordions  */
+
+    .accordions {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .accordions details {
+      background-color: #000000;
+      padding: 10px;
+      border: 1px solid #ffffff;
+      color: #fff;
+      text-align: center;
+      transition: 0.6s;
+    }
+
+    .accordions summary {
+      cursor: pointer;
+      font-family: "Gotham-bold";
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      transition: 0.6s;
+      padding: 6.25px;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::marker {
+      color: #000;
+    }
+
+    .custom-marker::after {
+      content: "▼";
+      float: right;
+      color: #ff6b00;
+    }
+
+    details[open] .custom-marker::after {
+      content: "▲";
+      transition: 0.6s;
+    }
+
+    details p {
+      font-family: "Gotham-book";
+      font-size: 1.1rem;
+      margin-top: 1.5rem;
+    }
+
+    /* Footer  */
+
+    .footer {
+      background-color: #ff6400; /* Cor de fundo laranja */
+      color: white; /* Cor do texto */
+      text-align: center; /* Alinha o texto ao centro */
+      padding: 20px; /* Espaço interno */
+      width: 100%;
+    }
+    .footer .logo {
+      width: 5rem;
+    }
+
+    .footer .centralize {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      margin-top: 1rem;
+      color: #000;
+    }
+
+    .footer .centralize img {
+      margin-right: 10px;
+      height: 3rem;
+    }
+
+    .footer .centralize strong {
+      font-size: 1.6rem;
+    }
+    .footer-icons {
+    }
+    .footer-icons img {
+      width: auto;
+      height: 26px;
+      margin: 1.5rem;
+      transition: 0.3s;
+    }
+
+    .footer-icons img:hover {
+      transform: scale(1.2);
+    }
+
+    .footer-contact {
+      margin-top: 20px;
+    }
+
+
+    @media(max-width: 560px){
+      .section-reparadores .cards{
+        flex-direction: column;
+      }
+      .section-reparadores .card{
+        width: 80%;
+        margin-bottom: 4rem;
+      }
+
+
+      .section-mockup{
+        height: 13rem;
+      }
+
+      .section-mockup img{
+        height: auto;
+        max-width: 26rem;
+        margin-right: 2rem;
+        margin-top: -10rem;
+      }
+
+    }
+  </style>
+
+  <body>
+    <main>
+      <header>
+        <button class="menu-hamburguer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="logo">
+          <img src="assets/logo-zen.png" alt="Logo Zensa" />
+        </div>
+      </header>
+
+      <div class="banner">
+        <img src="assets/vocezen.png" alt="Voce +zen" />
+      </div>
+
+      <div class="section-orange">
+        <div class="infos">
+          <h3>E com mais vantagens</h3>
+          <h4>Sorteio + resgate de pontos + superbets</h4>
+        </div>
+        <div class="wrap-btn">
+          <img
+            src="assets/btn-cadaster.png"
+            alt="imagem simulando um botão de cadastro"
+          />
+        </div>
+      </div>
+
+      <div class="section-reparadores">
+        <div class="infos">
+          <h3>Exclusivo para reparadores</h3>
+          <h4>
+            Compre produtos Zen participantes, scaneie o QrCode e cadastre-se.
+            Pronto, você já pode ganhar muitos prêmios
+          </h4>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <img src="assets/card-1.png" alt="Card 1" />
+            <h4 class="title-card">Sorteio de Prêmios</h4>
+            <p class="desc-card">
+              A cada produto cadastrado você ganha números da sorte para
+              concorrer a grandes prêmios!
+            </p>
+          </div>
+
+          <div class="card">
+            <img src="assets/card-2.png" alt="Card 2" />
+            <h4 class="title-card">Comprou ganhou Pontos</h4>
+            <p class="desc-card">
+              Cadastrando os produtos Zen você também ganha pontos para resgate
+              de centenas de prêmios no catálogo
+            </p>
+          </div>
+
+          <div class="card">
+            <img src="assets/card-3.png" alt="Card 3" />
+            <h4 class="title-card">Participe de SuperBets</h4>
+            <p class="desc-card">
+              Cadastre produtos Zen, responda quiz, interaja com a plataforma e
+              ganhe moedas virtuais para lances em Super Leilões.
+            </p>
+          </div>
+        </div>
+
+        <div class="btn-cadaster">
+          <img
+            src="assets/btn-cadaster-plus.png"
+            alt="imagem simulando um botão de cadastro"
+          />
+        </div>
+      </div>
+
+      <div class="section-grey">
+        <div class="info">
+          <h3>
+            Cadastre-se e tenha acesso a descontos em mais de 40 marcas
+            parceiras da Plataforma Zen.
+          </h3>
+        </div>
+
+        <div class="wrap-img">
+          <img
+            src="assets/caixa-zen.png"
+            alt="imagem de uma caixa de produto Zen"
+          />
+        </div>
+      </div>
+
+      <div class="como-participar">
+        <h3>Como participar!</h3>
+        <p>
+          Compre produtos Zen, scaneie o QrCode das embalagens e seus dados
+          pessoais. Pronto!, você já estará participando.
+        </p>
+      </div>
+
+      <div class="section-mockup">
+        <img
+          src="/assets/mockupchar.png"
+          alt="Mockup de dois celulares com moedas pulando em volta e um boneco estilo disney representando usuarios e um botão de cadastre-se abaixo"
+        />
+      </div>
+
+      <div class="accordions">
+        <details>
+          <summary onclick="toggleAccordion(this)" class="custom-marker">
+            Veja o regulamento
+          </summary>
+          <p>Conteúdo do regulamento...</p>
+        </details>
+
+        <details>
+          <summary onclick="toggleAccordion(this)" class="custom-marker">
+            Porque apenas para reparadores
+          </summary>
+          <p>Explicação de porque apenas para reparadores...</p>
+        </details>
+
+        <details>
+          <summary class="custom-marker">Quais produtos participam?</summary>
+          <p>Lista de produtos que participam...</p>
+        </details>
+      </div>
+
+      <footer class="footer">
+        <img class="logo" src="assets/logo-zen.png" alt="Logo ZEN" />
+        <div class="footer-contact">
+          <p>Dúvidas fale com a gente</p>
+          <p class="centralize">
+            <img src="assets/whatsapp-icon.png" alt="WhatsApp" /> 47<strong
+              >99286-5795</strong
+            >
+          </p>
+        </div>
+        <div class="footer-icons">
+          <a href="link-para-facebook"
+            ><img src="assets/facebook-icon.png" alt="Facebook"
+          /></a>
+          <a href="link-para-instagram"
+            ><img src="assets/instagram-icon.png" alt="Instagram"
+          /></a>
+          <a href="link-para-youtube"
+            ><img src="assets/youtube-icon.png" alt="YouTube"
+          /></a>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
