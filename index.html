@@ -20,6 +20,24 @@
       font-style: normal;
     }
 
+  ::-webkit-scrollbar {
+    width: 5px; /* Controla a largura da scrollbar */
+  }
+  /* Personaliza o fundo da track (trilha por onde a thumb se move) */
+  ::-webkit-scrollbar-track {
+      background: #0F0F0F; /* Cor de fundo da trilha */
+  }
+
+  /* Personaliza a thumb (parte da barra que você arrasta) */
+  ::-webkit-scrollbar-thumb {
+      background: #0F0F0F; /* Cor da thumb */
+  }
+
+  /* Altera a cor da thumb ao passar o mouse sobre ela */
+  ::-webkit-scrollbar-thumb:hover {
+      background: #555; /* Cor da thumb ao passar o mouse */
+  }
+
     html {
       width: 100vw;
       overflow-x: hidden;
