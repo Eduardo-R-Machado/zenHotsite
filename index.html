@@ -111,7 +111,7 @@
       width: 100%;
       height: 600px;
       background-size: cover;
-      background-position: center 52%;
+      background-position: center 57%;
       background-repeat: no-repeat;
       display: flex;
       align-items: flex-end;
@@ -247,10 +247,13 @@
       font-size: 0.73rem;
       margin-top: 1rem;
       color: #000;
-      text-align: right;
+      text-align: left;
       width: 100%;
-      margin-right: 2rem;
-      margin-bottom: -2rem;
+      margin-left: 2rem;
+      margin-bottom: -10rem;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+
     }
 
     .section-reparadores .card .desc-card {
@@ -401,7 +404,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1rem;
       transition: 0.6s;
       padding: 15.25px;
     }
@@ -510,6 +512,19 @@
       text-decoration: underline;
     }
 
+    .orange{
+      color: #ff6400;
+    }
+
+    .clean{
+      text-decoration: none;
+      transition: 1s;
+    }
+
+    .clean:hover{
+      transform: scale(1.1);
+    }
+
     @media(max-width: 560px){
 
       .section-orange{
@@ -572,7 +587,7 @@
       <div class="section-orange">
         <div class="infos">
           <h3>E com mais vantagens</h3>
-          <h4>Sorteio + resgate de pontos + superbets</h4>
+          <h4>Sorteio + resgate de pontos + super leilões</h4>
         </div>
         <div class="wrap-btn">
           <img
@@ -616,7 +631,7 @@
 
           <div class="card">
             <img src="assets/card-3.png" alt="Card 3" />
-            <h4 class="title-card">Participe de SuperBets</h4>
+            <h4 class="title-card">Participe de Super Leilões</h4>
             <p class="desc-card">
               Cadastre produtos ZEN, responda quiz, interaja com a plataforma e
               ganhe moedas virtuais para lances em Super Leilões.
@@ -666,52 +681,53 @@
       <div class="accordions">
         <details>
           <summary class="custom-marker">
-            1. Como posso participar do <b class="underbold">Clube Você + ZEN?</b>
+          <p> 1. Como posso participar do <b class="underbold">Clube Você + ZEN?</b></p> 
           </summary>
-          <p>• Para participar, basta ser um reparador de veículos e comprar produtos ZEN em lojas de autopeças. Ao adquirir produtos ZEN, acesse o QR code disponível na embalagem e cadastre-se no site www.clubevocemaiszen.com.br. Aceite o regulamento e comece a acumular pontos, moedas virtuais e números da sorte!</p>
+          <p>• O <b class="underbold">Clube Você + ZEN</b>  é exclusivo para os aplicadores, reparadores e mecânicos automotivos das oficinas de todo o Brasil. Para participar basta comprar os produtos ZEN nas lojas de autopeças e distribuidores, acessar o QrCode disponível na etiqueta da embalagem e cadastrar seus dados pessoais e CNPJ da oficina no site <a href="https://www.clubevocemaiszen.com.br/" class="orange" target="_blank" rel="noopener noreferrer">www.clubevocemaiszen.com.br</a> , aceitar o regulamento e começar a acumular pontos, moedas virtuais e números da sorte!
+          </p>
         </details>
     
         <details>
           <summary class="custom-marker">
-            2. Quais são os benefícios de fazer parte do  <b class="underbold">Clube Você + ZEN?</b>
+          <p>  2. Quais são os benefícios de fazer parte do  <b class="underbold">Clube Você + ZEN?</b> </p>
           </summary>
           <p>• Ao participar do <b class="underbold">Clube Você + ZEN</b>, você terá acesso a descontos exclusivos em mais de 40 lojas parceiras, além de poder participar de sorteios, leilões e resgatar produtos com seus pontos acumulados.</p>
         </details>
     
         <details>
-          <summary class="custom-marker">3. Como acumulo pontos no <b class="underbold">Clube Você + ZEN?</b></summary>
-          <p>• Você acumula pontos ao cadastrar produtos ZEN utilizando o QR code disponível na embalagem. Cada produto cadastrado gera pontos, moedas virtuais e números da sorte, proporcionando mais chances de ganhar prêmios.</p>
+          <summary class="custom-marker"> <p>3. Como acumulo pontos no <b class="underbold">Clube Você + ZEN?</b> </p></summary>
+          <p>• Você acumula pontos ao cadastrar produtos ZEN utilizando o QR code disponível na etiqueta da embalagem. Cada produto cadastrado gera pontos, moedas virtuais e números da sorte, proporcionando mais chances de ganhar prêmios.</p>
         </details>
     
         <details>
-          <summary class="custom-marker">4. Quando e como posso resgatar os prêmios?</summary>
+          <summary class="custom-marker"> <p>4. Quando e como posso resgatar os prêmios? </p></summary>
           <p>• Os pontos acumulados podem ser trocados por prêmios no catálogo online disponível no site do <b class="underbold">Clube Você + ZEN.</b>  Basta acessar o catálogo, escolher os prêmios desejados e realizar o resgate. Os produtos serão entregues no endereço cadastrado em até 30 dias úteis.</p>
         </details>
     
         <details>
           <summary class="custom-marker">
-            5. Posso participar dos leilões? Como funciona?
+           <p> 5. Posso participar dos leilões? Como funciona?</p>
           </summary>
           <p>• Sim, você pode participar dos leilões utilizando as moedas virtuais acumuladas. Os leilões ocorrem mensalmente no site do <b class="underbold">Clube Você + ZEN.</b> Basta acessar a área de leilões, dar seus lances e aguardar o resultado. Caso seu lance seja o vencedor, o prêmio será entregue em até 30 dias úteis.</p>
         </details>
     
         <details>
           <summary class="custom-marker">
-            6. Como participar do sorteio?
+          <p>  6. Como participar do sorteio?</p>
           </summary>
           <p>• A cada 50 pontos acumulados você ganha um número da sorte. Com os números acumulados você participa do sorteio de 1 Moto, 1 TV e 1 Notebook no dia 21 de dezembro.</p>
         </details>
     
         <details>
           <summary class="custom-marker">
-            7. Há prazo de validade para os pontos, moedas virtuais e números da sorte?
+          <p>  7. Há prazo de validade para os pontos, moedas virtuais e números da sorte? </p>
           </summary>
           <p>• Sim, os pontos acumulados têm validade para resgate até o dia 25 de fevereiro de 2025. As moedas virtuais também expiram nesta mesma data, podendo ser consideradas para uma possível extensão do <b class="underbold">Clube Você + ZEN?</b>, a critério da ZEN. Os números da sorte poderão ser acumulados no período de 1º de março a 15 de dezembro e o sorteio será pela extração da Loteria Federal do dia 21 de dezembro de 2024.</p>
         </details>
     
         <details>
           <summary class="custom-marker">
-            8. O que acontece se eu não aceitar o regulamento do Clube?
+           <p> 8. O que acontece se eu não aceitar o regulamento do Clube? </p>
           </summary>
           <p>• Se você não aceitar o regulamento, não será possível participar do <b class="underbold">Clube Você + ZEN.</b> A aceitação do regulamento é necessária para o cadastro e acumulação de pontos. Certifique-se de ler e aceitar todas as condições para desfrutar das vantagens oferecidas pelo <b class="underbold">Clube Você + ZEN?</b></p>
         </details>
@@ -721,13 +737,18 @@
         <img class="logo" src="assets/logo-zen.png" alt="Logo ZEN" />
 
         <div class="footer-contact">
-          <a href="assets/regulamento-zen.pdf" class="regulamento" download="regulamento-zen.pdf">Veja aqui o Regulamento</a>
+          <span class="regulamento">Veja aqui os Regulamentos</span>
+
+          <a href="assets/regulamento-zen.pdf" class="regulamento" download="regulamento-zen.pdf">Regulamento do Clube</a>
+          <a href="assets/regulamento-zen.pdf" class="regulamento" download="regulamento-zen.pdf">Regulamento do Sorteio</a>
+
           <p>Dúvidas fale com a gente</p>
-          <p class="centralize">
-            <img src="assets/whatsapp-icon.png" alt="WhatsApp" /> 47<strong
-              >99286-5795</strong
-            >
-          </p>
+          <a class="centralize clean" href="https://wa.me/5547992865795" target="_blank">
+            <p class="centralize">
+                <img src="assets/whatsapp-icon.png" alt="WhatsApp" /> 47<strong>99286-5795</strong>
+            </p>
+        </a>
+        
         </div>
         <div class="footer-icons">
           <a href="https://web.facebook.com/curtaZENSA/"
